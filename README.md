@@ -35,7 +35,7 @@ Other IP commands (e.g., show ip route)
 ## PROGRAM
 
 # 1. Client.py
- 
+``` 
  import socket
 
 s = socket.socket()
@@ -49,9 +49,9 @@ while True:
     print(s.recv(4096).decode('utf-8'))
 
 s.close()
-
+```
 # 2.Server.py
-
+```
 import socket
 from pythonping import ping
 
@@ -74,7 +74,7 @@ while True:
         c.send(f"Ping failed: {e}".encode('utf-8'))
 
 c.close()
-
+```
 ## Output
 
 <img width="765" height="209" alt="image" src="https://github.com/user-attachments/assets/74b8eeaa-a7a1-47cf-ad9a-e0145e3b599e" />
